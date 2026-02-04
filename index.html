@@ -1,0 +1,2054 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portofolio | Front-End Developer</title>
+    <meta
+      name="description"
+      content="Portofolio Front-End Developer: proyek, keahlian, pengalaman, dan kontak."
+    />
+
+    <!-- ICONS (Remix Icon) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <style>
+:root {
+  --bg: #f4f4f4;
+  --bg2: #ededed;
+  --text: #111111;
+  --muted: rgba(17, 17, 17, 0.72);
+  --line: rgba(0, 0, 0, 0.14);
+  --shadow: 0 18px 60px rgba(0, 0, 0, 0.12);
+  --radius: 18px;
+  --max: 1080px;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background: radial-gradient(1100px 700px at 20% 10%, rgba(0, 0, 0, 0.05), transparent 58%),
+    radial-gradient(900px 680px at 85% 15%, rgba(0, 0, 0, 0.045), transparent 60%),
+    radial-gradient(900px 780px at 50% 100%, rgba(0, 0, 0, 0.035), transparent 60%),
+    linear-gradient(180deg, var(--bg), var(--bg2));
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.container {
+  width: min(var(--max), calc(100% - 36px));
+  margin: 0 auto;
+}
+
+/* =========================
+   COVER
+========================= */
+.cover {
+  height: 100vh;
+  min-height: 560px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
+}
+.cover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/porto/images/PORTOFOLIO.png") center / cover no-repeat;
+  filter: grayscale(1);
+  transform: scale(1.02);
+  z-index: 0;
+}
+.cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(900px 520px at 20% 20%, rgba(255, 255, 255, 0.55), transparent 55%),
+    radial-gradient(900px 520px at 80% 20%, rgba(255, 255, 255, 0.45), transparent 60%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+  pointer-events: none;
+  z-index: 1;
+}
+.cover-ui {
+  position: relative;
+  z-index: 2;
+  width: min(var(--max), calc(100% - 36px));
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 14px;
+  padding-bottom: 26px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.65);
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: transform 0.12s ease, background 0.18s ease, border 0.18s ease;
+  user-select: none;
+  white-space: nowrap;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+}
+.btn i {
+  font-size: 16px;
+  line-height: 0;
+}
+.btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn.primary {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+}
+.btn.primary:hover {
+  background: #000;
+}
+.btn.primary i {
+  color: #fff;
+}
+.btn.ghost {
+  background: transparent;
+  box-shadow: none;
+}
+.btn.small {
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-weight: 900;
+  font-size: 13px;
+}
+.btn.small i {
+  font-size: 14px;
+}
+
+/* =========================
+   NAV
+========================= */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  background: rgba(245, 245, 245, 0.7);
+  border-bottom: 1px solid var(--line);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+body.on-cover .nav {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  gap: 12px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #111;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.08);
+}
+.nav-links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-weight: 800;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  font-size: 13px;
+}
+.nav-links a {
+  padding: 10px 12px;
+  border-radius: 12px;
+  transition: 0.18s ease;
+}
+.nav-links a:hover {
+  background: rgba(0, 0, 0, 0.06);
+  color: var(--text);
+}
+.nav-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.hamburger {
+  display: none;
+}
+.mobile-menu {
+  display: none;
+  border-top: 1px solid var(--line);
+  padding: 10px 0 14px;
+}
+.mobile-menu a {
+  display: block;
+  padding: 12px 10px;
+  border-radius: 12px;
+  color: var(--muted);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  font-size: 13px;
+}
+.mobile-menu a:hover {
+  background: rgba(0, 0, 0, 0.06);
+  color: var(--text);
+}
+.mobile-menu.show {
+  display: block;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  padding: 34px 0 10px;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 18px;
+  align-items: stretch;
+}
+.panel {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.hero-card {
+  padding: 22px;
+  position: relative;
+  overflow: hidden;
+}
+.glow {
+  position: absolute;
+  inset: -35%;
+  background: radial-gradient(circle at 30% 20%, rgba(0, 0, 0, 0.06), transparent 45%),
+    radial-gradient(circle at 70% 40%, rgba(0, 0, 0, 0.05), transparent 50%),
+    radial-gradient(circle at 50% 70%, rgba(0, 0, 0, 0.045), transparent 50%);
+  filter: blur(18px);
+  pointer-events: none;
+  opacity: 0.9;
+}
+.hero-top {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.tag {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid var(--line);
+  padding: 8px 12px;
+  border-radius: 999px;
+  width: fit-content;
+  font-weight: 900;
+}
+.tag i {
+  font-size: 16px;
+}
+.tag b {
+  color: var(--text);
+}
+h1 {
+  margin: 0;
+  font-size: clamp(28px, 3.4vw, 44px);
+  line-height: 1.06;
+  letter-spacing: -0.6px;
+}
+.lead {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 16px;
+  max-width: 56ch;
+  font-weight: 700;
+}
+.hero-cta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+.meta {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: var(--muted);
+  font-weight: 900;
+}
+.pill {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.72);
+}
+.pill .k {
+  color: var(--text);
+}
+.dot2 {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #111;
+}
+
+.profile-card {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.avatar {
+  aspect-ratio: 16/11;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: none;
+}
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 2px 2px 0;
+}
+.profile-info .name {
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+}
+.profile-info .role {
+  color: var(--muted);
+  font-weight: 900;
+}
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 2px;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+section {
+  padding: 22px 0;
+}
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.section-title h2 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.section-title p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.card {
+  padding: 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.72);
+  transition: transform 0.14s ease, background 0.18s ease, border 0.18s ease;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+}
+.card:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(0, 0, 0, 0.18);
+}
+.card h3 {
+  margin: 0 0 6px;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+  font-weight: 700;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.thumb {
+  width: 100%;
+  height: clamp(170px, 42vw, 260px);
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.7);
+  margin-bottom: 12px;
+  position: relative;
+  overflow: hidden;
+}
+.thumb:after {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(circle at 30% 30%, rgba(0, 0, 0, 0.12), transparent 42%);
+  transform: rotate(18deg);
+  opacity: 0.55;
+  pointer-events: none;
+}
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.badge {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.86);
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.75);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+}
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.project h3 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 1.25;
+}
+.project p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 12px;
+  padding: 14px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+}
+.item .when {
+  color: var(--muted);
+  font-weight: 900;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+}
+.item .what {
+  font-weight: 900;
+  letter-spacing: 0.2px;
+}
+.item .desc {
+  color: var(--muted);
+  margin-top: 4px;
+  line-height: 1.65;
+  font-weight: 700;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  padding: 26px 0 40px;
+  color: var(--muted);
+  text-align: center;
+  border-top: 1px solid var(--line);
+  margin-top: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  font-size: 12px;
+}
+
+/* =========================
+   LIST (untuk skills)
+========================= */
+.list {
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+.list li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.65;
+  font-weight: 700;
+}
+.list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--text);
+  opacity: 0.9;
+}
+
+/* =========================
+   LIST DETAIL (untuk About)
+   (HTML kamu pakai .list-detail)
+========================= */
+.list-detail {
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+.list-detail li {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.72);
+  border-radius: 14px;
+  padding: 12px 12px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05);
+}
+.list-detail li b {
+  display: block;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+.list-detail li span {
+  display: block;
+  color: var(--muted);
+  font-weight: 700;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .projects {
+    grid-template-columns: 1fr;
+  }
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .item {
+    grid-template-columns: 1fr;
+  }
+  .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: inline-flex;
+  }
+  .cover-ui {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* NAV MOBILE: hamburger kiri, brand dead-center, tombol tetap tampil */
+  .nav-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  /* brand bener2 di tengah layar */
+  .brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+
+  /* biar nav-actions megang sisi kiri & kanan */
+  .nav-actions {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  /* tombol disembunyiin di mobile (sesuai CSS kamu) */
+  .nav-actions a.btn {
+    display: none;
+  }
+
+  .nav-actions a.btn.small {
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: calc(100% - 24px);
+  }
+  .hero {
+    padding: 22px 0 8px;
+  }
+  .hero-card {
+    padding: 16px;
+  }
+  .lead {
+    font-size: 15px;
+  }
+  .avatar {
+    aspect-ratio: 16/12;
+  }
+  .project h3 {
+    font-size: 15px;
+    margin-top: 14px;
+    margin-bottom: 10px;
+  }
+  .project p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .item {
+    padding: 12px;
+    gap: 8px;
+  }
+  .item .when {
+    font-size: 12px;
+  }
+
+  /* COVER MOBILE FIX */
+  .cover {
+    height: clamp(100px, 45vw, 420px);
+    min-height: unset;
+  }
+  .cover::before {
+    background: url("/porto/images/PORTOFOLIO.png") center / cover no-repeat;
+    transform: none;
+  }
+}
+
+/* =========================
+   BLACK CAT (CUTE, WALK + IDLE, BIGGER)
+========================= */
+.cat {
+  position: fixed;
+  left: -140px;
+  bottom: 14px;
+  width: 132px;
+  height: 86px;
+  z-index: 9999;
+  pointer-events: auto;
+  cursor: pointer;
+  user-select: none;
+  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.18));
+  transform-origin: center;
+  animation: cat-walk var(--cat-speed, 16s) linear infinite;
+}
+
+/* jalan bolak-balik (container) */
+@keyframes cat-walk {
+  0% {
+    transform: translateX(-140px) scaleX(1);
+  }
+  49% {
+    transform: translateX(calc(100vw + 140px)) scaleX(1);
+  }
+  50% {
+    transform: translateX(calc(100vw + 140px)) scaleX(-1);
+  }
+  99% {
+    transform: translateX(-140px) scaleX(-1);
+  }
+  100% {
+    transform: translateX(-140px) scaleX(1);
+  }
+}
+
+/* WALK DETAILS (kaki jalan + bob) */
+.cat:not(.is-paused) .body-bob {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: bob 0.6s ease-in-out infinite;
+}
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1.6px);
+  }
+}
+
+/* kaki jalan (bergantian) */
+.cat:not(.is-paused) .paw {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.cat:not(.is-paused) .p1,
+.cat:not(.is-paused) .p3 {
+  animation: stepA 0.48s ease-in-out infinite;
+}
+.cat:not(.is-paused) .p2,
+.cat:not(.is-paused) .p4 {
+  animation: stepB 0.48s ease-in-out infinite;
+}
+
+@keyframes stepA {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+}
+@keyframes stepB {
+  0%,
+  100% {
+    transform: translateY(3px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+}
+
+/* ekor ikut ayun pas jalan */
+.cat:not(.is-paused) .tail {
+  transform-box: fill-box;
+  transform-origin: 20% 60%;
+  animation: tailWalk 0.55s ease-in-out infinite;
+}
+@keyframes tailWalk {
+  0%,
+  100% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-12deg);
+  }
+}
+
+/* IDLE POSE (pas diem) */
+.cat.is-paused {
+  animation: none;
+}
+
+/* badan napas pelan */
+.cat.is-paused .body-bob {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: breathe 1.8s ease-in-out infinite;
+}
+@keyframes breathe {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1px);
+  }
+}
+
+/* kaki stop (pose diem) */
+.cat.is-paused .paw {
+  animation: none !important;
+  transform: translateY(0) !important;
+}
+
+/* ekor idle pelan */
+.cat.is-paused .tail {
+  transform-box: fill-box;
+  transform-origin: 20% 60%;
+  animation: tailIdle 1.6s ease-in-out infinite;
+}
+@keyframes tailIdle {
+  0%,
+  100% {
+    transform: rotate(6deg);
+  }
+  50% {
+    transform: rotate(-8deg);
+  }
+}
+
+/* blink mata */
+.cat .blink {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: blink 5.2s infinite;
+}
+@keyframes blink {
+  0%,
+  95%,
+  100% {
+    transform: scaleY(1);
+  }
+  96% {
+    transform: scaleY(0.15);
+  }
+  97% {
+    transform: scaleY(1);
+  }
+}
+
+/* pupil ngikut kursor */
+.cat .pupil {
+  transform: translate(var(--pupil-x, 0px), var(--pupil-y, 0px));
+  transition: transform 0.06s linear;
+}
+
+/* kepala ngikut kursor */
+.cat .head {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: rotate(var(--head-rot, 0deg));
+  transition: transform 0.08s linear;
+}
+
+/* mobile */
+@media (max-width: 640px) {
+  .cat {
+    width: 110px;
+    height: 74px;
+    bottom: 10px;
+  }
+}
+    </style>
+  </head>
+
+  <body class="on-cover">
+    <div class="cat" id="cat" aria-hidden="true" title="click to pause / resume">
+      <svg viewBox="0 0 220 140" width="100%" height="100%">
+        <!-- shadow -->
+        <ellipse cx="118" cy="126" rx="70" ry="9" fill="rgba(0,0,0,.10)" />
+
+        <!-- tail -->
+        <path
+          class="tail"
+          d="M38 88 C 18 78, 18 56, 42 54 C 62 52, 66 72, 52 82"
+          fill="none"
+          stroke="#0b0b0b"
+          stroke-width="16"
+          stroke-linecap="round"
+        />
+
+        <!-- BODY GROUP (bob) -->
+        <g class="body-bob">
+          <!-- body -->
+          <ellipse cx="118" cy="88" rx="68" ry="36" fill="#0b0b0b" />
+
+          <!-- tummy shine (bikin gemoy dikit) -->
+          <ellipse cx="130" cy="98" rx="30" ry="18" fill="rgba(255,255,255,.06)" />
+
+          <!-- paws (kaki) -->
+          <g>
+            <rect class="paw p1" x="78" y="108" width="18" height="26" rx="9" fill="#0b0b0b" />
+            <rect
+              class="paw p2"
+              x="102"
+              y="110"
+              width="18"
+              height="26"
+              rx="9"
+              fill="#0b0b0b"
+            />
+            <rect
+              class="paw p3"
+              x="128"
+              y="110"
+              width="18"
+              height="26"
+              rx="9"
+              fill="#0b0b0b"
+            />
+            <rect class="paw p4" x="152" y="108" width="18" height="26" rx="9" fill="#0b0b0b" />
+          </g>
+
+          <!-- HEAD (tracking) -->
+          <g class="head" id="catHead">
+            <!-- head -->
+            <circle cx="176" cy="64" r="30" fill="#0b0b0b" />
+
+            <!-- ears -->
+            <path d="M156 54 L164 28 L178 50 Z" fill="#0b0b0b" />
+            <path d="M192 50 L208 30 L206 58 Z" fill="#0b0b0b" />
+
+            <!-- cheeks blush (cute) -->
+            <circle cx="162" cy="76" r="6" fill="rgba(255,160,180,.22)" />
+            <circle cx="192" cy="76" r="6" fill="rgba(255,160,180,.22)" />
+
+            <!-- eyes -->
+            <g class="blink">
+              <ellipse cx="168" cy="66" rx="7.2" ry="8.4" fill="#f4f4f4" />
+              <ellipse cx="190" cy="66" rx="7.2" ry="8.4" fill="#f4f4f4" />
+            </g>
+
+            <!-- pupil (tracking) -->
+            <circle class="pupil" cx="168" cy="66" r="2.2" fill="#111" />
+            <circle class="pupil" cx="190" cy="66" r="2.2" fill="#111" />
+
+            <!-- nose -->
+            <path d="M179 78 L185 78 L182 82 Z" fill="#f4f4f4" />
+
+            <!-- whiskers -->
+            <g stroke="rgba(244,244,244,.75)" stroke-width="2.2" stroke-linecap="round">
+              <path d="M154 82 L166 84" />
+              <path d="M154 90 L166 88" />
+              <path d="M198 84 L210 82" />
+              <path d="M198 88 L210 90" />
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <!-- NAV -->
+    <header class="nav" id="navBar">
+      <div class="container">
+        <div class="nav-inner">
+          <a class="brand" href="#top">
+            <span class="dot"></span>
+            <span data-i18n="brand.title">Portofolio Saya</span>
+          </a>
+
+          <nav class="nav-links" aria-label="Navigasi utama">
+            <a href="#about" data-i18n="nav.about">Tentang</a>
+            <a href="#skills" data-i18n="nav.skills">Keahlian</a>
+            <a href="#experience" data-i18n="nav.experience">Pengalaman</a>
+            <a href="#contact" data-i18n="nav.contact">Kontak</a>
+          </nav>
+
+          <div class="nav-actions">
+            <button class="btn ghost small hamburger" id="btnMenu" aria-label="Buka menu">☰</button>
+
+            <a class="btn small" href="#projects">
+              <i class="ri-layout-grid-line"></i> <span data-i18n="btn.seeProjects">Lihat Projek</span>
+            </a>
+            <a class="btn primary small" href="#contact">
+              <i class="ri-briefcase-4-line"></i> <span data-i18n="btn.hireMe">Rekrut Saya</span>
+            </a>
+
+            <!-- LANG SWITCH -->
+            <button class="btn ghost small" id="btnLang" type="button" aria-label="Ganti bahasa">
+              <i class="ri-translate-2"></i> <span id="langLabel">ID</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+          <a href="#about" data-i18n="nav.about">Tentang</a>
+          <a href="#skills" data-i18n="nav.skills">Keahlian</a>
+          <a href="#projects" data-i18n="nav.projects">Proyek</a>
+          <a href="#experience" data-i18n="nav.experience">Pengalaman</a>
+          <a href="#contact" data-i18n="nav.contact">Kontak</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- COVER (PAGE PERTAMA) -->
+    <section class="cover" id="cover" aria-label="Sampul Portofolio">
+      <div class="cover-ui"></div>
+    </section>
+
+    <!-- HERO -->
+    <main id="top" class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <section class="panel hero-card" aria-label="Hero">
+            <div class="glow"></div>
+
+            <div class="hero-top">
+              <div class="tag">
+                <i class="ri-hand-heart-line"></i>
+                <span data-i18n="hero.greet">Halo, saya</span> <b>Devita Nela Aprilia</b>
+              </div>
+
+              <h1>
+                <span data-i18n="hero.titleLine1">Tentang Saya</span><br />
+                <span data-i18n="hero.titleLine2">Front-End Developer.</span>
+              </h1>
+
+              <p class="lead" data-i18n="hero.lead">
+                Saya merupakan lulusan Teknik Komputer dengan minat kuat pada Frontend Development dan UI/UX.
+                Memiliki kemampuan dalam membangun antarmuka web yang responsif dan terstruktur menggunakan HTML,
+                JavaScript, serta ReactJS (dasar), serta melakukan perancangan desain antarmuka melalui Figma.
+                Berpengalaman melalui program industri MSIB sebagai Frontend Developer di PT Alterra Academy dan
+                terlibat dalam pengembangan UI untuk kebutuhan aplikasi maupun kompetisi. Selain itu, memiliki
+                pengalaman magang sebagai Front-End Developer di BGTK Provinsi Banten dengan fokus pada
+                pengembangan antarmuka, penyempurnaan UI, dan memastikan konsistensi tampilan sesuai kebutuhan
+                produk.
+              </p>
+
+              <div class="hero-cta">
+                <!-- Laravel: taro file di public/cv/cv-devita.pdf -->
+                <a class="btn primary" href="{{ asset('cv/cv-devita.pdf') }}" target="_blank" rel="noreferrer">
+                  <i class="ri-download-2-line"></i> <span data-i18n="btn.downloadCV">Unduh CV</span>
+                </a>
+              </div>
+
+              <div class="meta">
+                <div class="pill">
+                  <span class="dot2"></span> <span data-i18n="meta.available">Tersedia untuk freelance</span>
+                </div>
+                <div class="pill">
+                  <span class="k" data-i18n="meta.locationKey">Lokasi:</span>
+                  <span data-i18n="meta.locationVal">Banten, ID</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <aside class="panel profile-card" aria-label="Profil singkat">
+            <div class="avatar">
+                <img src="/porto/images/pp.jpeg" alt="Foto profil Devita Nela Aprilia" />
+            </div>
+
+            <div class="profile-info">
+              <div class="name">Devita Nela Aprilia</div>
+              <div class="role" data-i18n="profile.role">Front-End Developer • UI Engineer • IoT Engineer</div>
+            </div>
+
+            <div class="social">
+              <a class="btn small" href="https://wa.me/628131933891" target="_blank" rel="noreferrer"
+                ><i class="ri-whatsapp-line"></i> WhatsApp</a
+              >
+              <a class="btn small" href="https://github.com/" target="_blank" rel="noreferrer"
+                ><i class="ri-github-line"></i> GitHub</a
+              >
+              <a class="btn small" href="https://www.linkedin.com/" target="_blank" rel="noreferrer"
+                ><i class="ri-linkedin-box-line"></i> LinkedIn</a
+              >
+              <a
+                class="btn small"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=dnelaapri@gmail.com&su=Kerja%20Sama&body=Halo%20Devita,%0A%0A"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <i class="ri-google-line"></i> Email
+              </a>
+            </div>
+
+            <div class="card">
+              <h3 data-i18n="summary.title">Ringkasan</h3>
+              <p data-i18n="summary.text">
+                Saya Front-End Developer yang berfokus membangun antarmuka web modern yang responsif, cepat, dan
+                mudah digunakan. Terbiasa mengembangkan UI berbasis komponen, menjaga konsistensi desain, serta
+                mengutamakan aksesibilitas dan performa. Nyaman kolaborasi dengan tim backend dan kebutuhan
+                produk.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2 data-i18n="section.about">Tentang Saya</h2>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3 data-i18n="about.card1.title">Apa yang saya kerjakan</h3>
+
+            <ul class="list-detail">
+              <li>
+                <b data-i18n="about.work.lpTitle">Landing page</b>
+                <span data-i18n="about.work.lpDesc">responsif &amp; SEO-friendly.</span>
+              </li>
+
+              <li>
+                <b data-i18n="about.work.dashboardTitle">Dashboard admin</b>
+                <span data-i18n="about.work.dashboardDesc">CRUD, tabel, filter, pagination.</span>
+              </li>
+
+              <li>
+                <b data-i18n="about.work.companyTitle">Website company profile</b>
+                <span data-i18n="about.work.companyDesc">struktur rapi, performa oke.</span>
+              </li>
+
+              <li>
+                <b data-i18n="about.work.uiLibTitle">Pustaka komponen UI</b>
+                <span data-i18n="about.work.uiLibDesc">komponen reusable, gaya konsisten.</span>
+              </li>
+
+              <li>
+                <b data-i18n="about.work.e2eTitle">Membuat tampilan website end-to-end</b>
+                <span data-i18n="about.work.e2eDesc">dari implementasi UI sampai siap digunakan.</span>
+              </li>
+
+              <li>
+                <b data-i18n="about.work.perfTitle">Optimasi performa &amp; aksesibilitas</b>
+                <span data-i18n="about.work.perfDesc">loading lebih cepat, UI lebih nyaman.</span>
+              </li>
+
+              <li>
+                <b data-i18n="about.work.responsiveTitle">Desain responsif multi-device</b>
+                <span data-i18n="about.work.responsiveDesc">mobile–tablet–desktop.</span>
+              </li>
+
+              <li>
+                <b data-i18n="about.work.maintainTitle">Maintainability &amp; clean code</b>
+                <span data-i18n="about.work.maintainDesc">struktur rapi, reusable, scalable.</span>
+              </li>
+
+              <li>
+                <b data-i18n="about.work.collabTitle">Kolaborasi dengan tim</b>
+                <span data-i18n="about.work.collabDesc">review, iterasi fitur, dan sinkron kebutuhan.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 data-i18n="about.card2.title">Cara saya bekerja</h3>
+
+            <ul class="list-detail">
+              <li>
+                <b data-i18n="about.how.mobileTitle">Mobile-first approach:</b>
+                <span data-i18n="about.how.mobileDesc"
+                  >mulai dari layar kecil, lalu optimasi ke tablet &amp; desktop.</span
+                >
+              </li>
+
+              <li>
+                <b data-i18n="about.how.uxTitle">Fokus performa &amp; UX:</b>
+                <span data-i18n="about.how.uxDesc">UI cepat, interaksi responsif, loading/error state jelas.</span>
+              </li>
+
+              <li>
+                <b data-i18n="about.how.uiTitle">Konsisten dengan komponen UI:</b>
+                <span data-i18n="about.how.uiDesc"
+                  >pakai komponen reusable agar tampilan rapi dan seragam.</span
+                >
+              </li>
+
+              <li>
+                <b data-i18n="about.how.collabTitle">Kolaborasi Backend &amp; PM:</b>
+                <span data-i18n="about.how.collabDesc"
+                  >sync kebutuhan fitur, flow, dan integrasi API (endpoint/payload/error).</span
+                >
+              </li>
+
+              <li>
+                <b data-i18n="about.how.cleanTitle">Rapi &amp; scalable:</b>
+                <span data-i18n="about.how.cleanDesc">struktur kode jelas, naming konsisten, minim duplikasi.</span>
+              </li>
+
+              <li>
+                <b data-i18n="about.how.iterTitle">Iteratif &amp; feedback-driven:</b>
+                <span data-i18n="about.how.iterDesc"
+                  >deliver bertahap, lalu perbaiki berdasarkan review sampai optimal.</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 data-i18n="about.card3.title">Tujuan saya</h3>
+
+            <ul class="list-detail">
+              <li>
+                <b data-i18n="about.goal.g1Title">Membangun UI yang cepat, responsif, dan user-friendly</b>
+                <span data-i18n="about.goal.g1Desc"
+                  >Supaya pengguna nyaman dari pertama kali buka sampai selesai menggunakan fitur.</span
+                >
+              </li>
+
+              <li>
+                <b data-i18n="about.goal.g2Title">Menjaga konsistensi tampilan lewat komponen yang reusable</b>
+                <span data-i18n="about.goal.g2Desc"
+                  >Setiap halaman punya gaya yang seragam, rapi, dan terlihat profesional.</span
+                >
+              </li>
+
+              <li>
+                <b data-i18n="about.goal.g3Title">Membuat kode yang rapi, terstruktur, dan scalable</b>
+                <span data-i18n="about.goal.g3Desc"
+                  >Mudah di-maintain, mudah dikembangkan, dan tim lain bisa lanjut tanpa banyak bongkar ulang.</span
+                >
+              </li>
+
+              <li>
+                <b data-i18n="about.goal.g4Title">Mendukung proses rilis fitur lewat implementasi yang efisien</b>
+                <span data-i18n="about.goal.g4Desc"
+                  >Mulai dari layout, interaksi, sampai integrasi data dengan loading/error state yang jelas.</span
+                >
+              </li>
+
+              <li>
+                <b data-i18n="about.goal.g5Title">Terus berkembang untuk kontribusi yang lebih besar</b>
+                <span data-i18n="about.goal.g5Desc"
+                  >Meningkatkan skill teknis dan pola kerja agar bisa membangun produk yang reliable dan siap di skala
+                  nyata.</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEY SKILL -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-title">
+          <h2 data-i18n="section.skills">Key Skill</h2>
+          <p data-i18n="skills.subtitle">Ringkasan kemampuan & tools</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3 data-i18n="skills.techTools">Technical Tools</h3>
+            <ul class="list">
+              <li data-i18n="skills.tools.excel">Microsoft Excel</li>
+              <li data-i18n="skills.tools.word">Microsoft Word</li>
+              <li data-i18n="skills.tools.gsheet">Google Sheets</li>
+              <li data-i18n="skills.tools.gdocs">Google Docs</li>
+              <li data-i18n="skills.tools.gdrive">Google Drive</li>
+              <li data-i18n="skills.tools.ppt">PowerPoint</li>
+              <li data-i18n="skills.tools.canva">Canva</li>
+              <li data-i18n="skills.tools.docMgmt">Email &amp; Document Management</li>
+              <li data-i18n="skills.tools.finReport">Financial Reporting</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 data-i18n="skills.webDev">Web &amp; System Development</h3>
+            <ul class="list">
+              <li data-i18n="skills.dev.hardware">Hardware Installation</li>
+              <li>HTML</li>
+              <li>JavaScript</li>
+              <li data-i18n="skills.dev.react">ReactJS (Basic)</li>
+              <li>Laravel</li>
+              <li>UI/UX</li>
+              <li>Figma</li>
+              <li>ESP32</li>
+              <li>Arduino</li>
+              <li data-i18n="skills.dev.iot">IoT Tools</li>
+              <li data-i18n="skills.dev.autocad">AutoCAD (Basic)</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 data-i18n="skills.soft">Soft Skill</h3>
+            <ul class="list">
+              <li data-i18n="skills.soft.comm">Effective Communication</li>
+              <li data-i18n="skills.soft.open">Open to New Ideas</li>
+              <li data-i18n="skills.soft.team">Independent &amp; Team Player</li>
+              <li data-i18n="skills.soft.flex">Flexible Mindset</li>
+              <li data-i18n="skills.soft.lead">Leadership</li>
+              <li data-i18n="skills.soft.detail">Detail-oriented</li>
+              <li data-i18n="skills.soft.time">Time Management</li>
+              <li data-i18n="skills.soft.conf">Confidentiality Handling</li>
+            </ul>
+
+            <h3 style="margin-top: 14px" data-i18n="skills.langTitle">Language</h3>
+            <ul class="list">
+              <li data-i18n="skills.lang.id">Bahasa Indonesia (Native)</li>
+              <li data-i18n="skills.lang.en">English (Good in Written and Listening)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-title">
+          <h2 data-i18n="section.projects">Proyek</h2>
+          <p data-i18n="projects.subtitle">Isi tautan demo & repo kamu</p>
+        </div>
+
+        <div class="projects">
+          <article class="card project project-center">
+            <div class="thumb">
+              <img src="/porto/images/tanparagu.png" alt="Preview TanpaRagu" loading="lazy" />
+            </div>
+
+            <h3 data-i18n="projects.tanparagu.title">TanpaRagu (Tautan Pemetaan Kompetensi Guru)</h3>
+            <p data-i18n="projects.tanparagu.desc">
+              Tautan Pemetaan Kebutuhan Belajar Guru adalah aplikasi web dari BGTK Provinsi Banten yang membantu satuan
+              pendidikan mengidentifikasi kebutuhan belajar guru secara cepat, akurat, dan terstruktur, sekaligus
+              menyediakan data yang transparan dan mudah diakses untuk mendukung peningkatan kualitas pembelajaran.
+            </p>
+
+            <div class="badges">
+              <span class="badge">HTML</span>
+              <span class="badge">Bootstrap</span>
+              <span class="badge">JS</span>
+              <span class="badge">CSS</span>
+              <span class="badge">Laravel</span>
+            </div>
+
+            <div class="actions">
+              <a class="btn small" href="#" target="_blank" rel="noreferrer">
+                <i class="ri-live-line"></i> <span data-i18n="btn.demo">Demo</span>
+              </a>
+              <a class="btn small" href="https://github.com/yusupardabili30/web-tanparagu" target="_blank" rel="noreferrer">
+                <i class="ri-github-line"></i> <span data-i18n="btn.repo">Repositori</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="card project project-center">
+            <div class="thumb">
+              <img src="/porto/images/simproja.png" alt="Preview SIMPROJA" loading="lazy" />
+            </div>
+
+            <h3 data-i18n="projects.simproja.title">SIMPROJA (Sistem Informasi Program Kerja)</h3>
+            <p data-i18n="projects.simproja.desc">
+              SIMPROJA adalah aplikasi untuk manajemen program kerja di BGTK Provinsi Banten yang memudahkan pengelolaan,
+              pemantauan real-time, evaluasi, dan pelaporan program guna mendukung pengambilan keputusan yang lebih
+              efektif.
+            </p>
+
+            <div class="badges">
+              <span class="badge">HTML</span>
+              <span class="badge">Bootstrap</span>
+              <span class="badge">JS</span>
+              <span class="badge">CSS</span>
+              <span class="badge">Laravel</span>
+            </div>
+
+            <div class="actions">
+              <a class="btn small" href="#" target="_blank" rel="noreferrer">
+                <i class="ri-live-line"></i> <span data-i18n="btn.demo">Demo</span>
+              </a>
+              <a class="btn small" href="#" target="_blank" rel="noreferrer">
+                <i class="ri-github-line"></i> <span data-i18n="btn.repo">Repositori</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="card project project-center">
+            <div class="thumb">
+              <img src="/porto/images/drinkin.png" alt="Preview Mini Project" loading="lazy" />
+            </div>
+
+            <h3 data-i18n="projects.drinkin.title">Mini Project MSIB di PT Alterra Academy</h3>
+            <p data-i18n="projects.drinkin.desc">
+              Ini adalah project pertama saya sebagai Front-End Developer saat mengikuti Studi Independen MSIB di PT
+              Alterra Academy. Pada tugas UTS, saya mengerjakan mini project web frontend dan membangun fitur CRUD.
+            </p>
+
+            <div class="badges">
+              <span class="badge">React</span>
+              <span class="badge">CSS</span>
+              <span class="badge">DX</span>
+            </div>
+
+            <div class="actions">
+              <a class="btn small" href="https://drinkin-dun.vercel.app/" target="_blank" rel="noreferrer">
+                <i class="ri-live-line"></i> <span data-i18n="btn.demo">Demo</span>
+              </a>
+              <a class="btn small" href="https://github.com/Hoshiroo18/Drinkin" target="_blank" rel="noreferrer">
+                <i class="ri-github-line"></i> <span data-i18n="btn.repo">Repositori</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="card project">
+            <div class="thumb" aria-hidden="true"></div>
+            <h3 data-i18n="projects.company.title">Website Company Profile</h3>
+            <p data-i18n="projects.company.desc">
+              Multi section + form kontak, optimasi gambar, dan komponen yang bersih.
+            </p>
+            <div class="badges">
+              <span class="badge">HTML</span>
+              <span class="badge">CSS</span>
+              <span class="badge" data-i18n="projects.badge.responsive">Responsif</span>
+            </div>
+            <div class="actions">
+              <a class="btn small" href="#" target="_blank" rel="noreferrer">
+                <i class="ri-live-line"></i> <span data-i18n="btn.demo">Demo</span>
+              </a>
+              <a class="btn small" href="#" target="_blank" rel="noreferrer">
+                <i class="ri-github-line"></i> <span data-i18n="btn.repo">Repositori</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-title">
+          <h2 data-i18n="section.experience">Pengalaman Sebagai Front-End Developer</h2>
+          <p data-i18n="experience.subtitle">Ringkasan timeline</p>
+        </div>
+
+        <div class="timeline">
+          <div class="item">
+            <div class="when" data-i18n="experience.e1.when">Nov 2025 - Sekarang</div>
+            <div>
+              <div class="what" data-i18n="experience.e1.what">
+                Magang • Front-End Developer • BGTK (Balai Guru Dan Tenaga Kependidikan) Banten
+              </div>
+              <div class="desc" data-i18n="experience.e1.desc">
+                Mengembangkan dashboard yang responsif, meningkatkan performa aplikasi, serta menata dan menstandarkan
+                komponen UI untuk menjaga konsistensi tampilan dengan menggunakan Laravel.
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="when" data-i18n="experience.e2.when">August 2023 — Dec 2023</div>
+            <div>
+              <div class="what" data-i18n="experience.e2.what">
+                Studi Independent MSIB at PT Alterra Academy - FrontEnd Developer
+              </div>
+              <div class="desc" data-i18n="experience.e2.desc">
+                Mendesain dan mengembangkan landing page serta company profile, sekaligus melakukan pemeliharaan dan
+                penyempurnaan UI untuk UMKM dan kebutuhan tim internal menggunakan ReactJs.
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="when" data-i18n="experience.e3.when">2022 — 2023</div>
+            <div>
+              <div class="what" data-i18n="experience.e3.what">Mata Kuliah • Fokus kepada Front-End</div>
+              <div class="desc" data-i18n="experience.e3.desc">
+                Mempelajari pengembangan antarmuka web melalui mata kuliah Pemrograman Python dan Pemrograman Web
+                (Semester 3), serta Pengolahan Basis Data (Semester 4).
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2 data-i18n="section.contact">Kontak</h2>
+          <p data-i18n="contact.subtitle">Hubungi saya lewat kanal berikut</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3><i class="ri-mail-line"></i> <span data-i18n="contact.email.title">Email</span></h3>
+            <p>
+              <a href="mailto:dnelaapri@gmail.com"><b>dnelaapri@gmail.com</b></a><br />
+              <span style="color: var(--muted)" data-i18n="contact.email.hint">Respon cepat via email</span>
+            </p>
+            <div class="actions" style="margin-top: 12px">
+              <button class="btn small" type="button" onclick="copyText('dnelaapri@gmail.com')">
+                <i class="ri-file-copy-line"></i> <span data-i18n="btn.copy">Salin</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3><i class="ri-whatsapp-line"></i> <span>WhatsApp</span></h3>
+            <p>
+              <a href="https://wa.me/628131933891" target="_blank" rel="noreferrer"><b>+62 813 1933 3891</b></a><br />
+              <span style="color: var(--muted)" data-i18n="contact.wa.hint">Chat untuk kerja sama</span>
+            </p>
+            <div class="actions" style="margin-top: 12px">
+              <a class="btn small" href="https://wa.me/628131933891" target="_blank" rel="noreferrer">
+                <i class="ri-chat-3-line"></i> <span data-i18n="btn.openChat">Buka Chat</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3><i class="ri-linkedin-box-line"></i> <span>LinkedIn</span></h3>
+            <p>
+              <a href="https://www.linkedin.com/in/devita-nela-aprilia/" target="_blank" rel="noreferrer">
+                <b>Devita Nela Aprilia</b>
+              </a>
+              <br />
+              <span style="color: var(--muted)" data-i18n="contact.li.hint">Networking & rekrutmen</span>
+            </p>
+            <div class="actions" style="margin-top: 12px">
+              <a class="btn small" href="https://www.linkedin.com/in/devita-nela-aprilia/" target="_blank" rel="noreferrer">
+                <i class="ri-external-link-line"></i> <span data-i18n="btn.open">Buka</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">© <span id="year"></span> <span data-i18n="footer.name">Devita Nela Aprilia</span></div>
+    </footer>
+
+    <script>
+      // Menu mobile
+      const btnMenu = document.getElementById('btnMenu');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      btnMenu?.addEventListener('click', () => {
+        mobileMenu.classList.toggle('show');
+      });
+
+      mobileMenu?.querySelectorAll('a').forEach((a) => {
+        a.addEventListener('click', () => mobileMenu.classList.remove('show'));
+      });
+
+      // Tahun otomatis
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // =========================
+      // I18N (ID/EN)
+      // =========================
+      const translations = {
+        id: {
+          'brand.title': 'Portofolio Saya',
+
+          'nav.about': 'Tentang',
+          'nav.skills': 'Keahlian',
+          'nav.projects': 'Proyek',
+          'nav.experience': 'Pengalaman',
+          'nav.contact': 'Kontak',
+
+          'btn.seeProjects': 'Lihat Projek',
+          'btn.hireMe': 'Rekrut Saya',
+          'btn.contact': 'Kontak',
+          'btn.viewProjects': 'Lihat Proyek',
+          'btn.downloadCV': 'Unduh CV',
+          'btn.demo': 'Demo',
+          'btn.repo': 'Repositori',
+          'btn.copy': 'Salin',
+          'btn.openChat': 'Buka Chat',
+          'btn.open': 'Buka',
+
+          'hero.greet': 'Halo, saya',
+          'hero.titleLine1': 'Tentang Saya',
+          'hero.titleLine2': 'Front-End Developer.',
+          'hero.lead':
+            'Saya merupakan lulusan Teknik Komputer dengan minat kuat pada Frontend Development dan UI/UX. Memiliki kemampuan dalam membangun antarmuka web yang responsif dan terstruktur menggunakan HTML, JavaScript, serta ReactJS (dasar), serta melakukan perancangan desain antarmuka melalui Figma. Berpengalaman melalui program industri MSIB sebagai Frontend Developer di PT Alterra Academy dan terlibat dalam pengembangan UI untuk kebutuhan aplikasi maupun kompetisi. Selain itu, memiliki pengalaman magang sebagai Front-End Developer di BGTK Provinsi Banten dengan fokus pada pengembangan antarmuka, penyempurnaan UI, dan memastikan konsistensi tampilan sesuai kebutuhan produk.',
+
+          'meta.available': 'Tersedia untuk freelance',
+          'meta.locationKey': 'Lokasi:',
+          'meta.locationVal': 'Banten, ID',
+          'meta.emailKey': 'Email:',
+
+          'profile.role': 'Front-End Developer • UI Engineer • IoT Engineer',
+
+          'summary.title': 'Ringkasan',
+          'summary.text':
+            'Saya Front-End Developer yang berfokus membangun antarmuka web modern yang responsif, cepat, dan mudah digunakan. Terbiasa mengembangkan UI berbasis komponen, menjaga konsistensi desain, serta mengutamakan aksesibilitas dan performa. Nyaman kolaborasi dengan tim backend  dan kebutuhan produk.',
+
+          'section.about': 'Tentang Saya',
+          'section.skills': 'Key Skill',
+          'section.projects': 'Proyek',
+          'section.experience': 'Pengalaman Sebagai Front-End Developer',
+          'section.contact': 'Kontak',
+
+          'about.card1.title': 'Apa yang saya kerjakan',
+          'about.work.lpTitle': 'Landing page',
+          'about.work.lpDesc': 'responsif & SEO-friendly.',
+          'about.work.dashboardTitle': 'Dashboard admin',
+          'about.work.dashboardDesc': 'CRUD, tabel, filter, pagination.',
+          'about.work.companyTitle': 'Website company profile',
+          'about.work.companyDesc': 'struktur rapi, performa oke.',
+          'about.work.uiLibTitle': 'Pustaka komponen UI',
+          'about.work.uiLibDesc': 'komponen reusable, gaya konsisten.',
+          'about.work.e2eTitle': 'Membuat tampilan website end-to-end',
+          'about.work.e2eDesc': 'dari implementasi UI sampai siap digunakan.',
+          'about.work.perfTitle': 'Optimasi performa & aksesibilitas',
+          'about.work.perfDesc': 'loading lebih cepat, UI lebih nyaman.',
+          'about.work.responsiveTitle': 'Desain responsif multi-device',
+          'about.work.responsiveDesc': 'mobile–tablet–desktop.',
+          'about.work.maintainTitle': 'Maintainability & clean code',
+          'about.work.maintainDesc': 'struktur rapi, reusable, scalable.',
+          'about.work.collabTitle': 'Kolaborasi dengan tim',
+          'about.work.collabDesc': 'review, iterasi fitur, dan sinkron kebutuhan.',
+
+          'about.card2.title': 'Cara saya bekerja',
+          'about.how.mobileTitle': 'Mobile-first approach:',
+          'about.how.mobileDesc': 'mulai dari layar kecil, lalu optimasi ke tablet & desktop.',
+          'about.how.uxTitle': 'Fokus performa & UX:',
+          'about.how.uxDesc': 'UI cepat, interaksi responsif, loading/error state jelas.',
+          'about.how.uiTitle': 'Konsisten dengan komponen UI:',
+          'about.how.uiDesc': 'pakai komponen reusable agar tampilan rapi dan seragam.',
+          'about.how.collabTitle': 'Kolaborasi Backend & PM:',
+          'about.how.collabDesc': 'sync kebutuhan fitur, flow, dan integrasi API (endpoint/payload/error).',
+          'about.how.cleanTitle': 'Rapi & scalable:',
+          'about.how.cleanDesc': 'struktur kode jelas, naming konsisten, minim duplikasi.',
+          'about.how.iterTitle': 'Iteratif & feedback-driven:',
+          'about.how.iterDesc': 'deliver bertahap, lalu perbaiki berdasarkan review sampai optimal.',
+
+          'about.card3.title': 'Tujuan saya',
+          'about.goal.g1Title': 'Membangun UI yang cepat, responsif, dan user-friendly',
+          'about.goal.g1Desc': 'Supaya pengguna nyaman dari pertama kali buka sampai selesai menggunakan fitur.',
+          'about.goal.g2Title': 'Menjaga konsistensi tampilan lewat komponen yang reusable',
+          'about.goal.g2Desc': 'Setiap halaman punya gaya yang seragam, rapi, dan terlihat profesional.',
+          'about.goal.g3Title': 'Membuat kode yang rapi, terstruktur, dan scalable',
+          'about.goal.g3Desc': 'Mudah di-maintain, mudah dikembangkan, dan tim lain bisa lanjut tanpa banyak bongkar ulang.',
+          'about.goal.g4Title': 'Mendukung proses rilis fitur lewat implementasi yang efisien',
+          'about.goal.g4Desc': 'Mulai dari layout, interaksi, sampai integrasi data dengan loading/error state yang jelas.',
+          'about.goal.g5Title': 'Terus berkembang untuk kontribusi yang lebih besar',
+          'about.goal.g5Desc': 'Meningkatkan skill teknis dan pola kerja agar bisa membangun produk yang reliable dan siap di skala nyata.',
+
+          'skills.subtitle': 'Ringkasan kemampuan & tools',
+          'skills.techTools': 'Technical Tools',
+          'skills.webDev': 'Web & System Development',
+          'skills.soft': 'Soft Skill',
+          'skills.langTitle': 'Language',
+
+          'skills.tools.excel': 'Microsoft Excel',
+          'skills.tools.word': 'Microsoft Word',
+          'skills.tools.gsheet': 'Google Sheets',
+          'skills.tools.gdocs': 'Google Docs',
+          'skills.tools.gdrive': 'Google Drive',
+          'skills.tools.ppt': 'PowerPoint',
+          'skills.tools.canva': 'Canva',
+          'skills.tools.docMgmt': 'Email & Document Management',
+          'skills.tools.finReport': 'Financial Reporting',
+
+          'skills.dev.hardware': 'Hardware Installation',
+          'skills.dev.react': 'ReactJS (Basic)',
+          'skills.dev.iot': 'IoT Tools',
+          'skills.dev.autocad': 'AutoCAD (Basic)',
+
+          'skills.soft.comm': 'Effective Communication',
+          'skills.soft.open': 'Open to New Ideas',
+          'skills.soft.team': 'Independent & Team Player',
+          'skills.soft.flex': 'Flexible Mindset',
+          'skills.soft.lead': 'Leadership',
+          'skills.soft.detail': 'Detail-oriented',
+          'skills.soft.time': 'Time Management',
+          'skills.soft.conf': 'Confidentiality Handling',
+
+          'skills.lang.id': 'Bahasa Indonesia (Native)',
+          'skills.lang.en': 'English (Good in Written and Listening)',
+
+          'projects.subtitle': 'Isi tautan demo & repo kamu',
+          'projects.tanparagu.title': 'TanpaRagu (Tautan Pemetaan Kompetensi Guru)',
+          'projects.tanparagu.desc':
+            'Tautan Pemetaan Kebutuhan Belajar Guru adalah aplikasi web dari BGTK Provinsi Banten yang membantu satuan pendidikan mengidentifikasi kebutuhan belajar guru secara cepat, akurat, dan terstruktur, sekaligus menyediakan data yang transparan dan mudah diakses untuk mendukung peningkatan kualitas pembelajaran.',
+          'projects.simproja.title': 'SIMPROJA (Sistem Informasi Program Kerja)',
+          'projects.simproja.desc':
+            'SIMPROJA adalah aplikasi untuk manajemen program kerja di BGTK Provinsi Banten yang memudahkan pengelolaan, pemantauan real-time, evaluasi, dan pelaporan program guna mendukung pengambilan keputusan yang lebih efektif.',
+          'projects.drinkin.title': 'Mini Project MSIB di PT Alterra Academy',
+          'projects.drinkin.desc':
+            'Ini adalah project pertama saya sebagai Front-End Developer saat mengikuti Studi Independen MSIB di PT Alterra Academy. Pada tugas UTS, saya mengerjakan mini project web frontend dan membangun fitur CRUD.',
+          'projects.company.title': 'Website Company Profile',
+          'projects.company.desc': 'Multi section + form kontak, optimasi gambar, dan komponen yang bersih.',
+          'projects.badge.responsive': 'Responsif',
+
+          'experience.subtitle': 'Ringkasan timeline',
+          'experience.e1.when': 'Nov 2025 - Sekarang',
+          'experience.e1.what':
+            'Magang • Front-End Developer • BGTK (Balai Guru Dan Tenaga Kependidikan) Banten',
+          'experience.e1.desc':
+            'Mengembangkan dashboard yang responsif, meningkatkan performa aplikasi, serta menata dan menstandarkan komponen UI untuk menjaga konsistensi tampilan dengan menggunakan Laravel.',
+          'experience.e2.when': 'August 2023 — Dec 2023',
+          'experience.e2.what': 'Studi Independent MSIB at PT Alterra Academy - FrontEnd Developer',
+          'experience.e2.desc':
+            'Mendesain dan mengembangkan landing page serta company profile, sekaligus melakukan pemeliharaan dan penyempurnaan UI untuk UMKM dan kebutuhan tim internal menggunakan ReactJs.',
+          'experience.e3.when': '2022 — 2023',
+          'experience.e3.what': 'Mata Kuliah • Fokus kepada Front-End',
+          'experience.e3.desc':
+            'Mempelajari pengembangan antarmuka web melalui mata kuliah Pemrograman Python dan Pemrograman Web (Semester 3), serta Pengolahan Basis Data (Semester 4).',
+
+          'contact.subtitle': 'Hubungi saya lewat kanal berikut',
+          'contact.email.title': 'Email',
+          'contact.email.hint': 'Respon cepat via email',
+          'contact.wa.hint': 'Chat untuk kerja sama',
+          'contact.li.hint': 'Networking & rekrutmen',
+
+          'footer.name': 'Devita Nela Aprilia',
+
+          'toast.copied': 'Disalin:',
+        },
+
+        en: {
+          'brand.title': 'My Portfolio',
+
+          'nav.about': 'About',
+          'nav.skills': 'Skills',
+          'nav.projects': 'Projects',
+          'nav.experience': 'Experience',
+          'nav.contact': 'Contact',
+
+          'btn.seeProjects': 'See Projects',
+          'btn.hireMe': 'Hire Me',
+          'btn.viewProjects': 'View Projects',
+          'btn.downloadCV': 'Download CV',
+          'btn.demo': 'Demo',
+          'btn.repo': 'Repository',
+          'btn.copy': 'Copy',
+          'btn.openChat': 'Open Chat',
+          'btn.open': 'Open',
+
+          'hero.greet': "Hi, I'm",
+          'hero.titleLine1': 'About Me',
+          'hero.titleLine2': 'Front-End Developer.',
+          'hero.lead':
+            'I am a Computer Engineering graduate with a strong interest in Frontend Development and UI/UX. I can build responsive and well-structured web interfaces using HTML, JavaScript, and basic ReactJS, and also design interfaces in Figma. I gained experience through the MSIB industry program as a Frontend Developer at PT Alterra Academy and contributed to UI development for applications and competitions. I also interned as a Front-End Developer at BGTK Banten, focusing on interface development, UI refinement, and ensuring visual consistency according to product needs.',
+
+          'meta.available': 'Available for freelance',
+          'meta.locationKey': 'Location:',
+          'meta.locationVal': 'Banten, ID',
+          'meta.emailKey': 'Email:',
+
+          'profile.role': 'Front-End Developer • UI Engineer • IoT Engineer',
+
+          'summary.title': 'Summary',
+          'summary.text':
+            'I’m a Front-End Developer focused on building modern web interfaces that are responsive, fast, and easy to use. I’m experienced in developing component-based UIs, maintaining design consistency, and prioritizing accessibility and performance. I’m comfortable collaborating with backend teams and aligning with product needs.',
+          'section.about': 'About Me',
+          'section.skills': 'Key Skills',
+          'section.projects': 'Projects',
+          'section.experience': 'Experience as a Front-End Developer',
+          'section.contact': 'Contact',
+
+          'about.card1.title': 'What I do',
+          'about.work.lpTitle': 'Landing pages',
+          'about.work.lpDesc': 'responsive & SEO-friendly.',
+          'about.work.dashboardTitle': 'Admin dashboards',
+          'about.work.dashboardDesc': 'CRUD, tables, filters, pagination.',
+          'about.work.companyTitle': 'Company profile websites',
+          'about.work.companyDesc': 'clean structure, good performance.',
+          'about.work.uiLibTitle': 'UI component library',
+          'about.work.uiLibDesc': 'reusable components, consistent style.',
+          'about.work.e2eTitle': 'End-to-end web UI delivery',
+          'about.work.e2eDesc': 'from UI implementation to production-ready.',
+          'about.work.perfTitle': 'Performance & accessibility optimization',
+          'about.work.perfDesc': 'faster loading, more comfortable UX.',
+          'about.work.responsiveTitle': 'Multi-device responsive design',
+          'about.work.responsiveDesc': 'mobile–tablet–desktop.',
+          'about.work.maintainTitle': 'Maintainability & clean code',
+          'about.work.maintainDesc': 'clean structure, reusable, scalable.',
+          'about.work.collabTitle': 'Team collaboration',
+          'about.work.collabDesc': 'reviews, feature iterations, and alignment.',
+
+          'about.card2.title': 'How I work',
+          'about.how.mobileTitle': 'Mobile-first approach:',
+          'about.how.mobileDesc': 'start small screens, then optimize for tablet & desktop.',
+          'about.how.uxTitle': 'Performance & UX focus:',
+          'about.how.uxDesc': 'fast UI, responsive interactions, clear loading/error states.',
+          'about.how.uiTitle': 'Consistent UI components:',
+          'about.how.uiDesc': 'reusable components for a clean and consistent look.',
+          'about.how.collabTitle': 'Backend & PM collaboration:',
+          'about.how.collabDesc': 'sync requirements, flows, and API integration (endpoint/payload/error).',
+          'about.how.cleanTitle': 'Clean & scalable:',
+          'about.how.cleanDesc': 'clear structure, consistent naming, minimal duplication.',
+          'about.how.iterTitle': 'Iterative & feedback-driven:',
+          'about.how.iterDesc': 'deliver in steps and refine through reviews.',
+
+          'about.card3.title': 'My goals',
+          'about.goal.g1Title': 'Build fast, responsive, user-friendly UI',
+          'about.goal.g1Desc': 'So users feel comfortable from first open to finishing tasks.',
+          'about.goal.g2Title': 'Maintain visual consistency with reusable components',
+          'about.goal.g2Desc': 'Every page stays consistent, neat, and professional.',
+          'about.goal.g3Title': 'Write clean, structured, scalable code',
+          'about.goal.g3Desc': 'Easy to maintain and extend; teammates can continue smoothly.',
+          'about.goal.g4Title': 'Support feature releases with efficient implementation',
+          'about.goal.g4Desc': 'Layout, interactions, and data integration with clear states.',
+          'about.goal.g5Title': 'Keep growing for bigger impact',
+          'about.goal.g5Desc': 'Improve technical skills and workflows for real-world scale.',
+
+          'skills.subtitle': 'Skills & tools overview',
+          'skills.techTools': 'Technical Tools',
+          'skills.webDev': 'Web & System Development',
+          'skills.soft': 'Soft Skills',
+          'skills.langTitle': 'Languages',
+
+          'skills.tools.excel': 'Microsoft Excel',
+          'skills.tools.word': 'Microsoft Word',
+          'skills.tools.gsheet': 'Google Sheets',
+          'skills.tools.gdocs': 'Google Docs',
+          'skills.tools.gdrive': 'Google Drive',
+          'skills.tools.ppt': 'PowerPoint',
+          'skills.tools.canva': 'Canva',
+          'skills.tools.docMgmt': 'Email & Document Management',
+          'skills.tools.finReport': 'Financial Reporting',
+
+          'skills.dev.hardware': 'Hardware Installation',
+          'skills.dev.react': 'ReactJS (Basic)',
+          'skills.dev.iot': 'IoT Tools',
+          'skills.dev.autocad': 'AutoCAD (Basic)',
+
+          'skills.soft.comm': 'Effective Communication',
+          'skills.soft.open': 'Open to New Ideas',
+          'skills.soft.team': 'Independent & Team Player',
+          'skills.soft.flex': 'Flexible Mindset',
+          'skills.soft.lead': 'Leadership',
+          'skills.soft.detail': 'Detail-oriented',
+          'skills.soft.time': 'Time Management',
+          'skills.soft.conf': 'Confidentiality Handling',
+
+          'skills.lang.id': 'Indonesian (Native)',
+          'skills.lang.en': 'English (Good in Written and Listening)',
+
+          'projects.subtitle': 'Fill in your demo & repo links',
+          'projects.tanparagu.title': 'TanpaRagu (Teacher Competency Mapping Link)',
+          'projects.tanparagu.desc':
+            'A web app from BGTK Banten that helps schools identify teacher learning needs quickly, accurately, and in a structured way, providing transparent and accessible data to support improved learning quality.',
+          'projects.simproja.title': 'SIMPROJA (Work Program Information System)',
+          'projects.simproja.desc':
+            'A work-program management app for BGTK Banten with real-time monitoring, evaluation, and reporting to support more effective decision-making.',
+          'projects.drinkin.title': 'MSIB Mini Project at PT Alterra Academy',
+          'projects.drinkin.desc':
+            'My first project as a Front-End Developer during the MSIB Independent Study at PT Alterra Academy. For midterm tasks, I built a mini frontend web project with CRUD features.',
+          'projects.company.title': 'Company Profile Website',
+          'projects.company.desc': 'Multi-section + contact form, image optimization, and clean components.',
+          'projects.badge.responsive': 'Responsive',
+
+          'experience.subtitle': 'Timeline summary',
+          'experience.e1.when': 'Nov 2025 - Present',
+          'experience.e1.what': 'Intern • Front-End Developer • BGTK Banten',
+          'experience.e1.desc':
+            'Built responsive dashboards, improved app performance, and standardized UI components to maintain consistent visuals using Laravel.',
+          'experience.e2.when': 'Aug 2023 — Dec 2023',
+          'experience.e2.what': 'MSIB Independent Study at PT Alterra Academy - FrontEnd Developer',
+          'experience.e2.desc':
+            'Designed and developed landing pages and company profiles, and maintained/refined UI for SMEs and internal needs using ReactJS.',
+          'experience.e3.when': '2022 — 2023',
+          'experience.e3.what': 'Coursework • Front-End focus',
+          'experience.e3.desc':
+            'Learned web UI development through Python Programming and Web Programming (Semester 3), and Database Processing (Semester 4).',
+
+          'contact.subtitle': 'Reach me through these channels',
+          'contact.email.title': 'Email',
+          'contact.email.hint': 'Fast response via email',
+          'contact.wa.hint': 'Chat for collaboration',
+          'contact.li.hint': 'Networking & hiring',
+
+          'footer.name': 'Devita Nela Aprilia',
+
+          'toast.copied': 'Copied:',
+        },
+      };
+
+      function applyLanguage(lang) {
+        document.documentElement.lang = lang;
+        localStorage.setItem('lang', lang);
+
+        const langLabel = document.getElementById('langLabel');
+        if (langLabel) langLabel.textContent = lang === 'id' ? 'ID' : 'EN';
+
+        document.querySelectorAll('[data-i18n]').forEach((el) => {
+          const key = el.getAttribute('data-i18n');
+          const val = translations?.[lang]?.[key];
+          if (val != null) el.textContent = val;
+        });
+      }
+
+      // Init language: saved -> browser -> id
+      (function initLanguage() {
+        const saved = localStorage.getItem('lang');
+        const browser = (navigator.language || 'id').toLowerCase().startsWith('id') ? 'id' : 'en';
+        applyLanguage(saved || browser || 'id');
+      })();
+
+      // Toggle language
+      const btnLang = document.getElementById('btnLang');
+      btnLang?.addEventListener('click', () => {
+        const current = localStorage.getItem('lang') || 'id';
+        applyLanguage(current === 'id' ? 'en' : 'id');
+      });
+
+      // Bantuan salin teks (ikut bahasa)
+      function copyText(text) {
+        navigator.clipboard.writeText(text).then(() => {
+          const lang = localStorage.getItem('lang') || 'id';
+          alert((translations?.[lang]?.['toast.copied'] || 'Copied:') + ' ' + text);
+        });
+      }
+
+      // ENTER cover -> scroll ke konten + munculin navbar
+      const btnEnter = document.getElementById('btnEnter');
+      const btnQuickContact = document.getElementById('btnQuickContact');
+
+      function leaveCoverAndScroll(targetId) {
+        document.body.classList.remove('on-cover');
+        const el = document.querySelector(targetId);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      btnEnter?.addEventListener('click', () => leaveCoverAndScroll('#top'));
+      btnQuickContact?.addEventListener('click', (e) => {
+        e.preventDefault();
+        leaveCoverAndScroll('#contact');
+      });
+
+      // kalau user scroll manual, anggap udah masuk
+      window.addEventListener(
+        'scroll',
+        () => {
+          if (window.scrollY > 30) {
+            document.body.classList.remove('on-cover');
+          }
+        },
+        { passive: true }
+      );
+    </script>
+
+    <script>
+      (function catInteractive() {
+        const cat = document.getElementById('cat');
+        if (!cat) return;
+
+        const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
+
+        // speed jalan santai default
+        cat.style.setProperty('--cat-speed', '16s');
+
+        function freeze() {
+          const r = cat.getBoundingClientRect();
+          const padding = 8;
+
+          // clamp biar gak pernah keluar layar
+          const left = clamp(r.left, padding, window.innerWidth - r.width - padding);
+
+          cat.style.left = left + 'px';
+          cat.style.right = 'auto';
+        }
+
+        function unfreeze() {
+          // reset biar anim walk balik normal
+          cat.style.left = '-120px';
+          cat.style.right = 'auto';
+        }
+
+        cat.addEventListener('click', () => {
+          const paused = cat.classList.toggle('is-paused');
+          if (paused) {
+            freeze();
+          } else {
+            unfreeze();
+          }
+        });
+
+        // optional: kalau resize layar pas dia pause, tetep aman
+        window.addEventListener(
+          'resize',
+          () => {
+            if (cat.classList.contains('is-paused')) freeze();
+          },
+          { passive: true }
+        );
+      })();
+    </script>
+  </body>
+</html>
